@@ -13,7 +13,6 @@ This repository also contains a variety of methods to deal with noisy input vide
 ### Setup
 
 ``` bash
-```
 # Install packages through your package manager (NOTE: this is the usage for Arch, you will need to substitute for your own package manger (e.g. apt))
 sudo pacman -S ffmpeg ttf-dejavu 
 python -m pip install --upgrade pip
@@ -22,9 +21,10 @@ python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl
 python -m pip install -r requirements.txt
 # Check your torch/CUDA install:
 python -c 'import torch; print(torch.__version__, torch.cuda.is_available(), torch.cuda.get_device_name(0) if torch.cuda.is_available() else "NO CUDA")'
+```
 
 Check that `torch.cuda.is_available()` prints `True` before running. Otherwise PyTorch may have been installed with a CPU-only build. See [PyTorch official installation instructions](https://pytorch.org/get-started/locally/) if you need a different CUDA wheel. A CUDA toolkit compiler (`nvcc`) is **not** required to use the pre-built wheel.
-```
+
 
 ## Usage:
 
